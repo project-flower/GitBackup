@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="GitBackup.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Branches" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Command" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">diff --diff-filter=ACMRT --name-only HEAD</Value>
+    </Setting>
+    <Setting Name="Destinations" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="GitBin" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Program Files\Git\bin\git.exe</Value>
+    </Setting>
+    <Setting Name="NewLine" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\n</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
