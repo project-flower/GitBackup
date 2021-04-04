@@ -47,6 +47,7 @@ namespace GitBackup
             // 
             // comboBoxLocalBranch
             // 
+            this.comboBoxLocalBranch.AllowDrop = true;
             this.comboBoxLocalBranch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxLocalBranch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
@@ -56,6 +57,8 @@ namespace GitBackup
             this.comboBoxLocalBranch.Name = "comboBoxLocalBranch";
             this.comboBoxLocalBranch.Size = new System.Drawing.Size(776, 20);
             this.comboBoxLocalBranch.TabIndex = 1;
+            this.comboBoxLocalBranch.DragDrop += new System.Windows.Forms.DragEventHandler(this.comboBox_DragDrop);
+            this.comboBoxLocalBranch.DragEnter += new System.Windows.Forms.DragEventHandler(this.comboBox_DragEnter);
             // 
             // labelDestination
             // 
@@ -68,6 +71,7 @@ namespace GitBackup
             // 
             // comboBoxDestination
             // 
+            this.comboBoxDestination.AllowDrop = true;
             this.comboBoxDestination.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxDestination.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
@@ -77,6 +81,8 @@ namespace GitBackup
             this.comboBoxDestination.Name = "comboBoxDestination";
             this.comboBoxDestination.Size = new System.Drawing.Size(776, 20);
             this.comboBoxDestination.TabIndex = 3;
+            this.comboBoxDestination.DragDrop += new System.Windows.Forms.DragEventHandler(this.comboBox_DragDrop);
+            this.comboBoxDestination.DragEnter += new System.Windows.Forms.DragEventHandler(this.comboBox_DragEnter);
             // 
             // buttonBackup
             // 

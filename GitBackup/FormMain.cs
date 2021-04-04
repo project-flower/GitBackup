@@ -157,6 +157,33 @@ namespace GitBackup
             ShowMessage(string.Format("{0}{1}has been successfully backed up to{1}{2}.", branchName, newLine, destination), MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        private void comboBox_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] dropData;
+
+            try
+            {
+                dropData = (e.Data.GetData(DataFormats.FileDrop)) as string[];
+            }
+            catch
+            {
+                return;
+            }
+
+            if ((dropData == null) || (dropData.Length < 1))
+            {
+                return;
+            }
+
+            var comboBox = sender as ComboBox;
+            comboBox.Text = dropData[0];
+        }
+
+        private void comboBox_DragEnter(object sender, DragEventArgs e)
+        {
+            e.Effect = (e.Data.GetDataPresent(DataFormats.FileDrop) ? DragDropEffects.All : DragDropEffects.None);
+        }
+
         private void load(object sender, EventArgs e)
         {
             Initialize();
